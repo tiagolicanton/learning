@@ -22,4 +22,10 @@
 
 - (void) badAccessFromMemoryLeak;
 
+- (void) badAccessFromMemoryLeakNonRetainedObject;
+
+- (void) setNilObjectForKey;
+
+- (void) sessionTable;
+
 @end

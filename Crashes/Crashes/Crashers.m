@@ -10,6 +10,23 @@
 
 @implementation Crashers
 
+{
+	NSMutableArray *list;
+}
+
+- (id) init
+{
+    if (self == [super init])
+    {
+        list = [[NSMutableArray arrayWithCapacity:10] retain];
+        
+        [list addObject:@"A"];
+        [list addObject:@"B"];
+    }
+    return self;
+}
+
+
 - (void) addnilToMutableArray
 {
     NSMutableArray *myarray = [[NSMutableArray alloc] init];
@@ -80,7 +97,7 @@
 }
 
 
-//you need to enableZombie object to make it crash
+//you need to enable Zombie object to make it crash
 - (void) badAccessFromMemoryLeak
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -88,6 +105,62 @@
     s = [s substringFromIndex:[s rangeOfString:@"s"].location];
     [s release];
     [pool drain];
+}
+
+//why this doesn't crash?
+//following an example in http://www.raywenderlich.com/10505/my-app-crashed-now-what-part-2
+- (void) badAccessFromMemoryLeakNonRetainedObject
+{
+    NSString *s = @"hi";
+    
+    NSLog(@"%@", list);
+}
+
+
+//Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** setObjectForKey: object cannot be nil (key: K)'
+- (void) setNilObjectForKey
+{
+    NSMutableDictionary *d = [[NSMutableDictionary alloc] initWithCapacity:10];
+    
+    [d setObject:@"hi" forKey:@"key"];
+    
+    NSString *s = nil;
+    
+    [d setObject:s forKey:@"K"];
+
+}
+
+- (void) sessionTable
+{
+    NSMutableDictionary *sessionTable = [[NSMutableDictionary alloc] initWithCapacity:0];
+    
+    [sessionTable setObject:@"hi" forKey:@"hi"];
+    
+    [sessionTable setObject:@"hello" forKey:@"hello"];
+    
+    //[sessionTable release];
+    
+    //sessionTable = nil;
+    
+    //[sessionTable removeAllObjects];
+    
+    
+    //NSLog(@"%",[sessionTable respondsToSelector:@selector(allkeys:)]);
+    
+    //NSLog(@"%",[sessionTable isKindOfClass:[NSMutableArray class]]);
+    
+    NSLog(@"%p", sessionTable);
+    
+    NSArray* keys = [sessionTable allKeys];
+    
+    for (NSString *s in keys)
+        if ([s isEqual:@"h"])
+            NSLog(@"bingo");
+    
+    NSString *s = (NSString*)[sessionTable objectForKey:@"hi"];
+
+    NSLog(@"hi");
+    
 }
 
 

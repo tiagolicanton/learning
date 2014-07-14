@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF98EB39187D17D000A8CD0E /* AbandonedMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = FF98EB38187D17D000A8CD0E /* AbandonedMemory.m */; };
 		FFC54E0B1871170E00EEE994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC54E0A1871170E00EEE994 /* Foundation.framework */; };
 		FFC54E0D1871170E00EEE994 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC54E0C1871170E00EEE994 /* CoreGraphics.framework */; };
 		FFC54E0F1871170E00EEE994 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFC54E0E1871170E00EEE994 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF98EB37187D17D000A8CD0E /* AbandonedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbandonedMemory.h; sourceTree = "<group>"; };
+		FF98EB38187D17D000A8CD0E /* AbandonedMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbandonedMemory.m; sourceTree = "<group>"; };
 		FFC54E071871170E00EEE994 /* Crashes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crashes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC54E0A1871170E00EEE994 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFC54E0C1871170E00EEE994 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +121,8 @@
 				FFC54E191871170E00EEE994 /* AppDelegate.h */,
 				FFC54E1A1871170E00EEE994 /* AppDelegate.m */,
 				FFC54E1C1871170E00EEE994 /* Main.storyboard */,
+				FF98EB37187D17D000A8CD0E /* AbandonedMemory.h */,
+				FF98EB38187D17D000A8CD0E /* AbandonedMemory.m */,
 				FFC54E1F1871170E00EEE994 /* ViewController.h */,
 				FFC54E201871170E00EEE994 /* ViewController.m */,
 				FFC54E3F1871174900EEE994 /* Crashers.h */,
@@ -256,6 +261,7 @@
 			files = (
 				FFC54E411871174900EEE994 /* Crashers.m in Sources */,
 				FFC54E211871170E00EEE994 /* ViewController.m in Sources */,
+				FF98EB39187D17D000A8CD0E /* AbandonedMemory.m in Sources */,
 				FFC54E1B1871170E00EEE994 /* AppDelegate.m in Sources */,
 				FFC54E171871170E00EEE994 /* main.m in Sources */,
 			);
@@ -470,6 +476,7 @@
 				FFC54E3B1871170E00EEE994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFC54E3C1871170E00EEE994 /* Build configuration list for PBXNativeTarget "CrashesTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +485,7 @@
 				FFC54E3E1871170E00EEE994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
